@@ -5,7 +5,7 @@ public class Mars {
         int shipPopulation = 300;
         double meals = 4000.00;
         boolean landing = true;
-        landing = landingCheck(40);
+        landing = landingCheck(10);
 
         meals = meals - ((.75*2)*shipPopulation);
         System.out.println("Meals left after landing: " + meals);
@@ -21,6 +21,9 @@ public class Mars {
         } else {
             System.out.println("ERROR!!! Flight plan already set. Landing on the Plain");
         }
+
+        GuessingGame guessingGame = new GuessingGame();
+        guessingGame.main(new String[]{});
 
     }
 
