@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class GuessingGame {
 
-    public static void main(String[] args) {
+    public GuessingGame() {
         Scanner scanner = new Scanner(System.in);
 
         int randomNum = getRandomNumber();
@@ -41,7 +41,7 @@ public class GuessingGame {
         }
                 System.out.println("Well done, " + name + "! You found my number in " + counter + " tries!");
 
-        scanner.close();
+//        scanner.close();
 
 
 

@@ -23,9 +23,10 @@ public class Mars {
         }
 
         GuessingGame guessingGame = new GuessingGame();
-        guessingGame.main(new String[]{});
+//        GuessingGame.main(new String[]{});
 
-        new MarsExpedition();
+        MarsExpedition marsExpedition = new MarsExpedition();
+//        MarsExpedition.main(new String[]{});
 
     }
 

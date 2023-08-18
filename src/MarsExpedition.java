@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class MarsExpedition {
-    public static void main(String[] args) {
+    public MarsExpedition() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Booting up...\nReady!");
@@ -26,7 +26,7 @@ public class MarsExpedition {
         int team = scanner.nextInt();
 
         if (team > 2) {
-            System.out.println("That’s way too many people. We can only send 2 more members.");
+            System.out.println("That's way too many people. We can only send 2 more members.");
             team = 2;
         } else if ( team < 2){
             System.out.println("That's not enough people. We'll send 2 people to make a 3 person team.");
