@@ -8,10 +8,13 @@ public class Mars {
         landing = landingCheck(10);
 
         meals = meals - ((.75*2)*shipPopulation);
+        Thread.sleep(500);
         System.out.println("Meals left after landing: " + meals);
         meals = meals * 1.5;
+        Thread.sleep(500);
         System.out.println("Meals after finding extra crate: " + meals);
         shipPopulation = shipPopulation + 5;
+        Thread.sleep(500);
         System.out.println("Population after landing: " + shipPopulation);
 
         String landingLocation = "The Plain";
@@ -23,10 +26,10 @@ public class Mars {
         }
 
         GuessingGame guessingGame = new GuessingGame();
-//        GuessingGame.main(new String[]{});
 
         MarsExpedition marsExpedition = new MarsExpedition();
-//        MarsExpedition.main(new String[]{});
+
+        FindingsList findingsList = new FindingsList();
 
     }
 
@@ -39,10 +42,11 @@ public class Mars {
             } else if (minute % 2 == 0) {
                 System.out.println("Right");
             } else {
-                System.out.println("Calculating");
+                System.out.println("Calculating...");
             }
-            Thread.sleep(250);
+            Thread.sleep(500);
         }
+        Thread.sleep(500);
         System.out.println("Landed");
         return false;
     }

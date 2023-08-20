@@ -1,10 +1,15 @@
+import javax.naming.SizeLimitExceededException;
 import java.util.Scanner;
 
 public class MarsExpedition {
-    public MarsExpedition() {
+    public MarsExpedition() throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Booting up...\nReady!");
+        Thread.sleep(1000);
+        System.out.println("Booting up...");
+        Thread.sleep(1000);
+        System.out.println("Ready!");
+        Thread.sleep(1000);
         System.out.println("What's your name?");
         String name = scanner.nextLine();
         System.out.println("Hi " + name + " - Welcome to the Expedition prep program. Are you ready to head out into the new world? Type Y or N");
@@ -22,6 +27,7 @@ public class MarsExpedition {
             System.out.println("Too bad you are team leader. You have to go.");
         }
 
+        Thread.sleep(500);
         System.out.println("How many people do you want on your team?");
         int team = scanner.nextInt();
 
@@ -35,11 +41,13 @@ public class MarsExpedition {
             System.out.println("Perfect!");
         }
 
+        Thread.sleep(500);
         System.out.println("You are allowed to bring one snack with you. What do you want to bring?");
         scanner.nextLine();
         String snack = scanner.nextLine();
+        Thread.sleep(500);
         System.out.println("Nice choice, you will be bringing " + snack + " with you.");
-
+        Thread.sleep(500);
         System.out.println("Now, you can choose a vehicle: \n1: Mars Rover \n2: Space Shuttle \n3: Flying Orange" +
                 "\nWhich one would you like: 1, 2, or 3?");
         int vehicle = scanner.nextInt();
@@ -55,12 +63,25 @@ public class MarsExpedition {
             System.out.println("I see you can't follow the rules. That's ok, I'll choose something for you ;)");
         }
 
-        scanner.close();
+        Thread.sleep(500);
+        System.out.println("Way to go, " + name + "! Looks like you're ready for this expedition!");
+        Thread.sleep(500);
+        System.out.println("You'll have " + team + " people on your team." +
+                "\nYou will be driving " + vehicleChoice + "! And you will have " + snack + " for a snack.");
+        Thread.sleep(500);
+        System.out.println("Enjoy! Departing in...");
+        Thread.sleep(1000);
+        System.out.println("5...");
+        Thread.sleep(1000);
+        System.out.println("4...");
+        Thread.sleep(1000);
+        System.out.println("3...");
+        Thread.sleep(1000);
+        System.out.println("2...");
+        Thread.sleep(1000);
+        System.out.println("1...");
+        Thread.sleep(1000);
+        System.out.println("Blast off!");
 
-        System.out.println("Way to go, " + name + "! Looks like you're ready for this expedition!" +
-                "\nYou'll have " + team + " people on your team." +
-                "\nYou will be driving " + vehicleChoice + "! And you will have " + snack + " for a snack." +
-                "\nEnjoy! Departing in..." +
-                "\n5...\n4...\n3...\n2...\n1...\nBlast off!");
     }
 }
